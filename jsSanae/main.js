@@ -6,8 +6,8 @@ let saisieInt=null;
 let i=null;
 let max=null;
 let min=null;
-let somme=null;
-let moyenne=null;
+let somme = null;
+let moyenne = null;
 saisie=prompt('veuillez entrer un nombre : ');
 saisieInt=parseInt(saisie);
 console.log(saisieInt);
@@ -15,13 +15,12 @@ console.log(saisieInt);
 if(saisie!=0){
     while(saisie!=0) {  
        
-        numbers[total]=saisieInt;
         numbers.push(saisieInt);
         somme = somme+saisieInt;
-        moyenne= somme/total;
     saisie=prompt('veuillez entrer un nombre : ');
-    saisieInt=parseInt(saisie);
+    saisieInt = parseInt(saisie);
         console.log(saisieInt);
+        total++;
     }
     max=numbers[0];
   
@@ -41,9 +40,10 @@ if(saisie!=0){
     }
    
     
-
+    moyenne= somme/total;
 console.log(total,' nombres saisis \n','Compris entre  ', min, ' et  ', max, '\n Pour une somme de  ', somme, '\n et une moyenne de  ', moyenne);
 alert(total+' nombres saisis \n'+'Compris entre  '+ min+ ' et  '+ max+ '\n Pour une somme de  '+ somme+'\n et une moyenne de  '+ moyenne)
+
 }
 else {
     console.log('vous n\'avez entrer aucun nombre!!');
